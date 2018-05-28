@@ -246,7 +246,7 @@ deployJob.with{
       goals('org.mule.tools.maven:mule-maven-plugin:deploy')
       property('mule.home','${ENVIRONMENT_NAME}')
       property('mule.application.name','${APPLICATION_NAME}')
-      property('mule.application','${ARTIFACT_ID}-${RELEASE_VERSION}-SNAPSHOT.zip')
+      property('mule.application','${APPLICATION_NAME}-${RELEASE_VERSION}-SNAPSHOT.zip')
     }
     shell('''set +x
       |# STUB
