@@ -1,7 +1,5 @@
 // Folders
-def workspaceFolderName = "${WORKSPACE_NAME}"
-def projectFolderName = "${PROJECT_NAME}"
-def projectScmNamespace = "${SCM_NAMESPACE}"
+def projectFolderName = "Mulesoft"
 
 // Variables
 
