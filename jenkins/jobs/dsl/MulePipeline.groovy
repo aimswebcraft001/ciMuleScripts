@@ -213,8 +213,7 @@ deployJob.with{
   parameters{
     stringParam("B",'',"Parent build number")
     stringParam("PARENT_BUILD","Mulesoft_Build","Parent build name")
-    stringParam("ENVIRONMENT_NAME","Sandbox","Name of the environment.")
-    stringParam("APPLICATION_NAME","helloworld-mk01","Mule Application Name.")
+    stringParam("APPLICATION_NAME","helloworld","Mule Application Name.")
     stringParam("RELEASE_VERSION","1.0","Release version to be deployed.")
   }
   logRotator {
@@ -242,6 +241,12 @@ deployJob.with{
       }
       flatten(true)
       includePatterns('**/*.zip')
+    }
+    maven {
+      goals('org.mule.tools.maven:mule-maven-plugin:deploy')
+      property('mule.home','${ENVIRONMENT_NAME}')
+      property('mule.application.name','${APPLICATION_NAME}')
+      property('mule.application','${ARTIFACT_ID}-${RELEASE_VERSION}-SNAPSHOT.zip')
     }
     shell('''set +x
       |# STUB
