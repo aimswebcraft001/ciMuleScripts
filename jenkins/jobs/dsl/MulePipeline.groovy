@@ -230,7 +230,7 @@ deployJob.with{
   scm {
     git {
       remote {
-        url(mulesoftAppGitRepoUrl)
+        url(mulesoftScriptsGitRepoUrl)
       }
       branch("*/master")
     }
