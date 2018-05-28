@@ -248,10 +248,5 @@ deployJob.with{
       property('mule.application.name','${APPLICATION_NAME}')
       property('mule.application','${APPLICATION_NAME}-${RELEASE_VERSION}-SNAPSHOT.zip')
     }
-    shell('''set +x
-      |# STUB
-      |echo "THIS IS A STUB"
-      |set -x'''.stripMargin()
-    )
   }
 }
