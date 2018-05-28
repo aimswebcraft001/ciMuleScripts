@@ -236,6 +236,13 @@ deployJob.with{
     }
   }
   steps {
+    copyArtifacts("Mulesoft_Build") {
+      buildSelector {
+        buildNumber('${B}')
+      }
+      flatten(true)
+      includePatterns('**/*.zip')
+    }
     shell('''set +x
       |# STUB
       |echo "THIS IS A STUB"
