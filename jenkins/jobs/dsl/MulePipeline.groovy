@@ -143,7 +143,13 @@ codeAnalysisJob.with{
     preBuildCleanup()
     timestamps()
   }
-  steps {}
+  steps {
+    shell('''set +x
+      |# STUB
+      |echo "THIS IS A STUB"
+      |set -x'''.stripMargin()
+    )
+  }
   publishers{
     downstreamParameterized{
       trigger(projectFolderName + "/Mulesoft_Publish"){
@@ -184,6 +190,7 @@ publishJob.with{
     }
     shell('''set +x
       |# STUB
+      |echo "THIS IS A STUB"
       |set -x'''.stripMargin()
     )
   }
@@ -231,6 +238,7 @@ deployJob.with{
   steps {
     shell('''set +x
       |# STUB
+      |echo "THIS IS A STUB"
       |set -x'''.stripMargin()
     )
   }
