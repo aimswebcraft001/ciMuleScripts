@@ -1,5 +1,5 @@
 // Folders
-def projectFolderName = "Mulesoft"
+def projectFolderName = "Mulesoft01"
 def projectFolder = folder(projectFolderName)
 
 // Variables
