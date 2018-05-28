@@ -244,7 +244,7 @@ deployJob.with{
     }
     maven {
       goals('org.mule.tools.maven:mule-maven-plugin:deploy')
-      property('mule.home','${ENVIRONMENT_NAME}')
+      property('mule.home','/home/ubuntu/tools/mule-enterprise-standalone-3.9.1')
       property('mule.application.name','${APPLICATION_NAME}')
       property('mule.application','${APPLICATION_NAME}-${RELEASE_VERSION}-SNAPSHOT.zip')
     }
